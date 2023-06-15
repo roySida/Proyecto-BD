@@ -1,0 +1,109 @@
+.logo{
+ 
+    text-align: center;
+    
+}
+
+
+header{
+    width: 100%;
+    height: 60%;
+
+}
+
+header nav{
+    
+    display: flex;
+    justify-content: flex; /*Le dice donde se va a acomodar (derecha)*/ 
+    width: 250px;
+    height: auto; /*Horizontal*/
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.container {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color:#b2ffbc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.container .h1 {
+    font-size: 24px; /* Cambia el tamaño del h1 a 24 píxeles */
+    
+    font-family: 'Cedarville Cursive', cursive;}
+
+.foto{
+    margin-top: 2%;
+}
+
+.foto img {
+    
+    top: 0%;
+    width: 100px;
+   /*position: absolute;*/
+    height: 100px;
+    object-fit:cover;
+    background-size: cover;
+    border-radius: 80%;
+    border: 2px Solid rgb(0, 0, 0);
+    display: block; /* Convertir la imagen en un elemento de bloque */
+    margin: 0 auto; 
+
+}
+
+.explicacion{
+    /*background-color: blue;*/
+     text-align: center;
+
+}
+.explicacion .h2{
+    font-size: smaller;
+}
+.sobremi .fila{
+    
+    /*background-color: blueviolet;*/
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    margin-top: 30px;
+
+}
+
+.sobremi .fila .columna{
+   /* background-color: antiquewhite;*/
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+   
+}
+
+
+.sobremi .fila .columna h1{
+font-size: 20px;
+font-family: 'Cedarville Cursive', cursive;
+}
+.sobremi .fila .columna ul li{
+    font-size: 12px;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: left;
+    }
+.sobremi .fila .columna p{
+    font-size: 12px;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: justify;
+    }
+
+
+
+
