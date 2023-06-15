@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Modificar Empleado</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/modificar.js"></script>
+</head>
+<style>
+    body {
+                background-color: #9e9595; /* Color de fondo en formato hexadecimal */
+    }
+</style>
+<body>
+    <div class="container"></div>
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <h1>Modificar Empleado</h1>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-6 offset-3">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="" required><br><br>
+
+                    <label for="telefono">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" value=""><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" value="" readonly><br><br>
+                    
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" class="form-control" id="telefono" name="telefono" value=""><br><br>
+
+                    <label for="telefono">Dirección:</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" value=""><br><br>
+
+                    <button class="btn btn-primary">Guardar cambios</button>
+                    <button class="btn btn-secondary">Inicio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
