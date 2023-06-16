@@ -16,35 +16,113 @@
 
 <style>
     body {
-                background-color: #9e9595; /* Color de fondo en formato hexadecimal */
+        background-color: #f2f2f2;
+    }
+
+    .container {
+        margin-top: 5%;
+        max-width: 400px;
+    }
+
+    .login-box {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #32CD32;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-group label {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        background-color: #f2f2f2;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        background-color: #65FF96;
+        border-color: #65FF96;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #4CDB77;
+        border-color: #4CDB77;
+    }
+
+    .btn-tertiary {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #9e9595;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .btn-secondary {
+        background-color: #9e9595;
+        border-color: #9e9595;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: #7a6e6e;
+        border-color: #7a6e6e;
     }
 </style>
 
 <body>
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-6 offset-3">
-                <h1>Inicia sesión</h1>
+        <div class="row">
+            <div class="col-12">
+                <h1>Iniciar sesión</h1>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-6 offset-3">
-                <div class="form-group">
-                    <label for="input-mail">Correo electrónico</label>
-                    <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext">
-                    <small class="form-text text-muted">Tu correo de administrador</small>
-                </div>
-                <div class="form-group">
-                    <label for="input-password">Contraseña</label>
-                    <input type="password" class="form-control" id="input-password" placeholder="***********">
-                </div>
-                <div class="d-flex justify-content-between">
-                    <button class="btn btn-primary">Entrar</button>
-                    <button class="btn btn-terciary">Inicio</button>
-                    <button class="btn btn-secondary">Registro</button>
+            <div class="col-12">
+                <div class="login-box">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-mail">Correo electrónico:</label>
+                            <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password">Contraseña:</label>
+                            <input type="password" class="form-control" id="input-password" placeholder="***********" required>
+                        </div>
+                        <div class="d-flex justify-content-between mt-4">
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                            <button class="btn btn-secondary">Registrarse</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+
+
 </html>
