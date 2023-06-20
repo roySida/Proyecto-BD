@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perfil de Usuario</title>
+</head>
+  <style>
+    /* Estilos para el perfil de usuario */
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f0f2f5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+ background-color: #4CDB77;
+ border-color: #4CDB77;
+  color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color: #ffffff;
+}
+
+.username {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-buttons {
+  margin-left: auto;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #3b5998;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.main-area {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.additional-info {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.info-card {
+  background-color: #f0f2f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.photo-item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.photo-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .post-image {
+    max-width: 95%;
+    height: auto;
+    position: justify;
+  }
+  .post-rec{
+  padding: 20px;
+  background-color: #ffffff;
+  }
+
+
+}
+</style>
+<script>
+    function GoToModificar() {
+      window.location.href = "Modificarperfil.html";
+    }
+      function GoToAmigos() {
+      window.location.href = "Amigos.html";
+    }
+        function GoToSeguidores() {
+      window.location.href = "Seguidores.html";
+    }
+        function GoToPerfil(){
+      window.location.href = "Perfil.html";
+    }
+  </script>
+<body>
+  <div class="profile-container">
+    <div class="top-bar">
+      <img class="profile-picture" src="profile_picture.jpg" alt="Foto de perfil" onclick="GoToPerfil()">
+      <h1 class="username">@Username</h1>
+      <div class="profile-buttons">
+        <button class="button" onclick="GoToAmigos()">Amigos</button>
+        <button class="button" onclick="GoToSeguidores()">Seguidores</button>
+        <button class="button" onclick="GoToModificar()">Modificar Datos</button>
+      </div>
+    </div>
+    <div class="main-area">
+      <div class="additional-info">
+        <div class="info-card">
+          <h2>Información personal</h2>
+          <p><strong>Nombre:</strong> --</p>
+          <p><strong>Apellido:</strong> --</p>
+          <p><strong>Género:</strong> --</p>
+          <p><strong>Edad:</strong> --</p>
+        </div>
+
+    <div class="posts-container" class="post-rec">
+      <h2>Publicaciones</h2>
+      <div class="post">
+        <h3>Las bases de datos...</h3>
+        <p>Una base de datos es una recopilación organizada de información o datos estructurados </p>
+        <p>que normalmente se almacena de forma...</p>
+        <img class="post-image" src="img/fotoPubliacion1.png" alt="Imagen de la publicación" >
+        <span class="post-date">Fecha de la publicación: 20 de junio de 2023</span>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+  
+  </div>
+</body>
+</html>
