@@ -22,18 +22,29 @@ function init(){
 }
 
 function insert(){
+    var nombre = document.getElementById('usuario_ID').value
     var nombre = document.getElementById('nombre').value
     var apellido = document.getElementById('apellido').value
-    var telefono = document.getElementById('telefono').value
     var correo = document.getElementById('email').value
-    var direccion = document.getElementById('direccion').value
+    var correo = document.getElementById('contraseña').value
+    var telefono = document.getElementById('telefono').value
+    var correo = document.getElementById('direccion').value
+    var direccion = document.getElementById('fecha_nacimiento').value
+    var correo = document.getElementById('perfil').value
+    var correo = document.getElementById('genero').value
 
-    axios.post('http://localhost:3000/pokemon', {
+
+    axios.post('http://localhost:3000/proyectodb', {
+        user_usuarioID: usuarioId,
         user_nombre: nombre,
         user_apellido: apellido,
+        user_email: email,
+        user_contraseña: contraseña,
         user_telefono: telefono,
-        user_correo: correo,
-        user_direccion: direccion
+        user_direccion: direccion,
+        user_fecha_nacimiento: fecha_nacimiento,
+        user_perfil: perfil,
+        user_genero: genero
     }, headers).then(function(res){
         console.log(res)
         alert("Empleado registrado correctamente")
