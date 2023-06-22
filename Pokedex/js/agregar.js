@@ -25,7 +25,7 @@ function insert(){
     var usuarioId = document.getElementById('usuario_ID').value
     var nombre = document.getElementById('nombre').value
     var apellido = document.getElementById('apellido').value
-    var email = document.getElementById('email').value
+    var correo = document.getElementById('email').value
     var contraseña = document.getElementById('contraseña').value
     var telefono = document.getElementById('telefono').value
     var direccion = document.getElementById('direccion').value
@@ -38,7 +38,7 @@ function insert(){
         user_usuario: usuarioId,
         user_nombre: nombre,
         user_apellido: apellido,
-        user_email: email,
+        user_correo: correo,
         user_contraseña: contraseña,
         user_telefono: telefono,
         user_direccion: direccion,
