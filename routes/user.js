@@ -22,14 +22,14 @@ user.post("/signin", async (req, res, next) =>{
 
 user.post("/login", async (req, res, next) => {
     const{user_mail, user_password} = req.body
-    const query = `SELECT * FROM usuarios WHERE correo = '${user_mail}' AND contraseña = '${user_password}'`
+    const query = `SELECT * FROM usuarios WHERE correo = '${user_mail}' AND contraseña = '${user_password}'`;
     const rows = await db.query(query)
     
     if(user_mail && user_password){
         if(rows.length == 1){
             const token = jwt.sign({
                 user_id: rows[0].user_id,
-                user_mail: rows[0].user_mail
+                user_correo: rows[0].user_correo
             }, "debugkey")
             return res.status(200).json({code: 200, message: token})
         } else {

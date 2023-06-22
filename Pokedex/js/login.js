@@ -18,20 +18,20 @@ function init(){
 }
 
 function login(){
-    var mail = document.getElementById('input-mail').value
-    var pass = document.getElementById('input-password').value
+    var correo = document.getElementById('input-mail').value
+    var  contraseña = document.getElementById('input-password').value
 
     axios({
         method: 'post',
         url: 'http://localhost:3000/user/login',
         data: {
-            user_mail: mail,
-            user_password: pass
+            user_correo: correo,
+            user_contraseña: contraseña
         }
     }).then(function(res){
         if (res.data.code === 200){
             localStorage.setItem("token", res.data.message)
-            window.location.href = "inicio2.html"
+            window.location.href = "Perfil.html"
         } else {
             alert(res.data.message)
         }
