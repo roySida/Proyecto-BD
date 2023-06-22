@@ -18,9 +18,9 @@ function init(){
 }
 
 function signin(){
-    var  usuarioId = document.getElementById('input-usuario').value
+    var usuarioId = document.getElementById('input-usuario').value
     var nombre = document.getElementById('input-name').value
-    var apellido = document.getElementById('input-apellido').value
+    var apellidos = document.getElementById('input-apellido').value
     var correo = document.getElementById('input-mail').value
     var contraseña = document.getElementById('input-password').value
     var telefono = document.getElementById('input-telefono').value

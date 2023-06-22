@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EdgarM10pro/express_workshop.git"
+    "url": "git+https://github.com/roySida/Proyecto-BD.git"
   },
   "keywords": [
     "api",
@@ -17,7 +17,7 @@
     "express",
     "nodejs"
   ],
-  "author": "Edgar Torres",
+  "author": "Rodrigo Sida",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EdgarM10pro/express_workshop/issues"

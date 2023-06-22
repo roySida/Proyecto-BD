@@ -7,10 +7,9 @@ user.post("/signin", async (req, res, next) =>{
     const {user_usuario, user_nombre, user_apellidos, user_correo, user_contraseña, user_telefono, user_direccion, user_fecha_nacimiento, user_perfil, user_genero} = req.body
     if(user_usuario && user_nombre && user_apellidos && user_correo && user_contraseña && user_telefono && user_direccion && user_fecha_nacimiento && user_perfil && user_genero){
         const query = `INSERT INTO usuarios (usuarioID, nombre, apellidos, correo, contraseña, telefono, direccion, fecha_nacimiento, perfil, genero) 
-        VALUES('${user_usuario}', '${user_nombre}', '${user_apellidos}', '${user_correo}', '${user_contraseña}', '${user_telefono}', '${user_direccion}', '${user_fecha_nacimiento}', '${user_perfil}',
+        VALUES(${user_usuario}, '${user_nombre}', '${user_apellidos}', '${user_correo}', '${user_contraseña}', ${user_telefono}, '${user_direccion}', '${user_fecha_nacimiento}', '${user_perfil}',
         '${user_genero}')`
-        const rows = await db.query(query)
-    
+        const rows = await db.query(query) 
         if(rows.affectedRows == 1){
             return res.status(201).json({code: 201, message: "Usuario registrado correctamente"})
         }
@@ -20,9 +19,10 @@ user.post("/signin", async (req, res, next) =>{
 
 })
 
+
 user.post("/login", async (req, res, next) => {
     const{user_mail, user_password} = req.body
-    const query = `SELECT * FROM administradores WHERE correo = '${user_mail}' AND contraseña = '${user_password}'`
+    const query = `SELECT * FROM usuarios WHERE correo = '${user_mail}' AND contraseña = '${user_password}'`
     const rows = await db.query(query)
     
     if(user_mail && user_password){
