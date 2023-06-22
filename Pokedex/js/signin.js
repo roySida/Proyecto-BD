@@ -39,14 +39,14 @@ function signin(){
         data: {
             user_usuario: usuarioId,
             user_nombre: nombre,
-            user_apellido: apellido,
+            user_apellidos: apellidos,
             user_correo: correo,
             user_contraseña: contraseña,
             user_telefono: telefono,
             user_direccion: direccion,
             user_fecha_nacimiento: fecha_nacimiento,
-            user_genero: genero,
-            user_perfil: perfil
+            user_perfil: perfil,
+            user_genero: genero
         }
     }).then(function(res){
         console.log(res)
