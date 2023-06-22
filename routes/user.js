@@ -4,9 +4,11 @@ const user = express.Router()
 const db = require('../config/database')
 
 user.post("/signin", async (req, res, next) =>{
-    const {user_nombre, user_correo, user_contraseña} = req.body
-    if(user_nombre && user_correo && user_contraseña){
-        const query = `INSERT INTO administradores (nombre, correo, contraseña) VALUES ('${user_nombre}', '${user_correo}', '${user_contraseña}')`
+    const {user_usuario, user_nombre, user_correo, user_contraseña, user_telefono, user_direccion, user_fecha_nacimiento, user_perfil, user_genero} = req.body
+    if(user_usuario && user_nombre && user_correo && user_contraseña && user_telefono && user_direccion && user_fecha_nacimiento && user_genero && user_perfil){
+        const query = `INSERT INTO usuarios (usuariosID, nombre, apellidos, email, contraseña, telefono, direccion, fecha_nacimiento, perfil, genero) 
+        VALUES ('${user_usuario}', '${user_nombre}', '${user_correo}', '${user_contraseña}', '${user_telefono}', '${user_direccion}', '${user_fecha_nacimiento}', '${user_perfil}',
+        '${user_genero}',)`
         const rows = await db.query(query)
     
         if(rows.affectedRows == 1){

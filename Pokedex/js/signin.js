@@ -18,18 +18,35 @@ function init(){
 }
 
 function signin(){
-    var usuario = document.getElementById('input-usuario').value
+    var  usuarioId = document.getElementById('input-usuario').value
     var nombre = document.getElementById('input-name').value
+    var apellido = document.getElementById('input-apellido').value
     var correo = document.getElementById('input-mail').value
     var contraseña = document.getElementById('input-password').value
+    var telefono = document.getElementById('input-telefono').value
+    var direccion = document.getElementById('input-direccion').value
+    var fecha_nacimiento = document.getElementById('input-nacimiento').value
+    var genero = document.getElementById('input-genero').value
+    var perfil = document.getElementById('input-perfil').value
+
+
+
+
 
     axios({
         method: 'post',
         url: 'http://localhost:3000/user/signin',
         data: {
+            user_usuario: usuarioId,
             user_nombre: nombre,
+            user_apellido: apellido,
             user_correo: correo,
-            user_contraseña: contraseña
+            user_contraseña: contraseña,
+            user_telefono: telefono,
+            user_direccion: direccion,
+            user_fecha_nacimiento: fecha_nacimiento,
+            user_genero: genero,
+            user_perfil: perfil
         }
     }).then(function(res){
         console.log(res)

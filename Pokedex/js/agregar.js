@@ -22,20 +22,20 @@ function init(){
 }
 
 function insert(){
-    var nombre = document.getElementById('usuario_ID').value
+    var usuarioId = document.getElementById('usuario_ID').value
     var nombre = document.getElementById('nombre').value
     var apellido = document.getElementById('apellido').value
-    var correo = document.getElementById('email').value
-    var correo = document.getElementById('contraseña').value
+    var email = document.getElementById('email').value
+    var contraseña = document.getElementById('contraseña').value
     var telefono = document.getElementById('telefono').value
-    var correo = document.getElementById('direccion').value
+    var direccion = document.getElementById('direccion').value
     var direccion = document.getElementById('fecha_nacimiento').value
-    var correo = document.getElementById('perfil').value
-    var correo = document.getElementById('genero').value
+    var perfil = document.getElementById('perfil').value
+    var genero = document.getElementById('genero').value
 
 
     axios.post('http://localhost:3000/proyectodb', {
-        user_usuarioID: usuarioId,
+        user_usuario: usuarioId,
         user_nombre: nombre,
         user_apellido: apellido,
         user_email: email,
