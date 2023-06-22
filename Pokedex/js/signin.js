@@ -18,6 +18,7 @@ function init(){
 }
 
 function signin(){
+    var usuario = document.getElementById('input-usuario').value
     var nombre = document.getElementById('input-name').value
     var correo = document.getElementById('input-mail').value
     var contraseña = document.getElementById('input-password').value

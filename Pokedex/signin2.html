@@ -110,9 +110,9 @@
                 <div class="login-box">
 <form>
     <div class="form-group">
-        <label for="input-mail">Correo electrónico</label>
-        <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext">
-        <small class="form-text text-muted">Un correo para registrarte.</small>
+        <label for="input-usuario">Usuario ID</label>
+        <input type="int" class="form-control" id="input-usuario" placeholder="123456789">
+        <small class="form-text text-muted">Id para identificarte</small>
     </div>
     <div class="form-group">
         <label for="input-mail">Nombre</label>
@@ -120,8 +120,52 @@
         <small class="form-text text-muted">Tu nombre.</small>
     </div>
     <div class="form-group">
+        <label for="input-apellido">Apellidos</label>
+        <input type="text" class="form-control" id="input-apellido" placeholder="Ingresa tus apellidos">
+        <small class="form-text text-muted">Apellidos</small>
+    </div>
+    <div class="form-group">
+        <label for="input-mail">Correo electrónico</label>
+        <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext">
+        <small class="form-text text-muted">Un correo para registrarte.</small>
+    </div>
+    <div class="form-group">
         <label for="input-password">Contraseña</label>
         <input type="password" class="form-control" id="input-password" placeholder="***********">
+    </div>
+    <div class="form-group">
+        <label for="input-mail">Telefono</label>
+        <input type="int" class="form-control" id="input-telefono" placeholder="Ingresa tu numero de Telefono">
+        <small class="form-text text-muted">Numero de Telefono</small>
+    </div>
+    <div class="form-group">
+        <label for="input-mail">Direccion</label>
+        <input type="text" class="form-control" id="input-direccion" placeholder="Ingresa tu direccion">
+        <small class="form-text text-muted">Tu direccion</small>
+    </div>
+    <div class="form-group">
+        <label for="input-mail">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="input-nacimiento" placeholder="Ingresa tu fecha de nacimiento">
+        <small class="form-text text-muted">Tu fecha de nacimiento</small>
+    </div>
+    <div class="form-group">
+        <label for="perfil">Genero</label>
+        <small type="text" placeholder="Genero" class="form-text text-muted">Selecciona tu genero</small>
+        <select id="input-genero" name="Genero">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="No binario">No binario</option>
+            <option value="Otro">Otro</option>
+
+          </select>
+    </div>
+    <div class="form-group">
+        <label for="perfil">Perfil</label>
+        <small type="text" class="form-text text-muted"></small>
+        <select id="input-perfil" name="Perfil">
+            <option value="Privado">Privado</option>
+            <option value="Publico">Publico</option>
+          </select>
     </div>
     <div class="d-flex justify-content-between">
         <button class="btn btn-primary">Registrarme</button>
