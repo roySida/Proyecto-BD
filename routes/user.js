@@ -24,12 +24,12 @@ user.post("/login", async (req, res, next) => {
     const{user_correo, user_contraseña} = req.body
     const query = `SELECT * FROM usuarios WHERE correo = '${user_correo}' AND contraseña = '${user_contraseña}'`;
     const rows = await db.query(query)
-    
+    console.log(rows);
     if(user_correo && user_contraseña){
         if(rows.length == 1){
             const token = jwt.sign({
-                user_id: rows[0].user_id,
-                user_correo: rows[0].user_correo
+                usuarioID: rows[0].usuarioID,
+                correo: rows[0].correo
             }, "debugkey")
             return res.status(200).json({code: 200, message: token})
         } else {

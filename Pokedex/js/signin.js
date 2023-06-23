@@ -51,7 +51,7 @@ function signin(){
     }).then(function(res){
         console.log(res)
         alert("Registro exitoso")
-        window.location.href = "login2.html"
+        window.location.href = "inicioSesion.html"
     }).catch(function(err){
         console.log(err)
     })

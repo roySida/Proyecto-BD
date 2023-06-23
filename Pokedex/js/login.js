@@ -30,8 +30,9 @@ function login(){
         }
     }).then(function(res){
         if (res.data.code === 200){
+            console.log(res);
             localStorage.setItem("token", res.data.message)
-            window.location.href = "Perfil.html"
+             window.location.href = "Perfil.html"
         } else {
             alert(res.data.message)
         }
