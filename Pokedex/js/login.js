@@ -7,13 +7,21 @@ function init(){
             window.location.href = "signin2.html"
         })
 
+        document.querySelector('.btn-primary').addEventListener('click', login)({
+
+        }
+    )
+
         document.querySelector('.btn-terciary').addEventListener('click', function(){
             window.location.href = "PaginaInicial2.html"
         })
     
-        document.querySelector('.btn-primary').addEventListener('click', login)
+        
+
+    
+
     } else {
-        window.location.href = "Inicio2.html"
+        window.location.href = "Perfil.html"
     }
 }
 
