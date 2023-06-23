@@ -12,7 +12,7 @@ function init(){
         }
 
         document.querySelector('.btn-secondary').addEventListener('click', function(){
-            window.location.href = "inicio2.html"
+            window.location.href = "Perfil.html"
         })
 
         document.querySelector('.btn-primary').addEventListener('click', insert)
@@ -48,7 +48,7 @@ function insert(){
     }, headers).then(function(res){
         console.log(res)
         alert("Empleado registrado correctamente")
-        window.location.href = "Inicio2.html"
+        window.location.href = "Perfil.html"
     }).catch(function(err){
         console.log(err)
     })

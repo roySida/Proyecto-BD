@@ -39,7 +39,7 @@ function login(){
     }).then(function(res){
         if (res.data.code === 200){
             localStorage.setItem("token", res.data.message)
-            window.location.href = "Perfil.html"
+            window.location.href = "Inicio2.html"
         } else {
             alert(res.data.message)
         }
