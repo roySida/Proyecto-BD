@@ -21,11 +21,11 @@ user.post("/signin", async (req, res, next) =>{
 
 
 user.post("/login", async (req, res, next) => {
-    const{user_mail, user_password} = req.body
-    const query = `SELECT * FROM usuarios WHERE correo = '${user_mail}' AND contraseña = '${user_password}'`;
+    const{user_correo, user_contraseña} = req.body
+    const query = `SELECT * FROM usuarios WHERE correo = '${user_correo}' AND contraseña = '${user_contraseña}'`;
     const rows = await db.query(query)
     
-    if(user_mail && user_password){
+    if(user_correo && user_contraseña){
         if(rows.length == 1){
             const token = jwt.sign({
                 user_id: rows[0].user_id,
@@ -33,7 +33,7 @@ user.post("/login", async (req, res, next) => {
             }, "debugkey")
             return res.status(200).json({code: 200, message: token})
         } else {
-            return res.status(200).json({code: 401, message: "Usuario y/o contraseña incorrecta idiota"})
+            return res.status(200).json({code: 401, message: "Usuario y/o contraseña incorrecta"})
         }
     }
     return res.status(500).json({code: 500, message: "Campos incompletos"}) 
