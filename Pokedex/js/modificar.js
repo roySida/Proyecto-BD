@@ -24,37 +24,54 @@ function init(){
 
 function loadDatos(){
     var correo = localStorage.getItem("correo")
-    axios.get("http://localhost:3000/pokemon/email/" + correo, headers).then(function(res){
+    axios.get("http://localhost:3000/user/email/" + correo, headers).then(function(res){
         //console.log(res)
         //llenamos los input
         var datos = res.data.message
+        document.querySelector('#usuario').value = `${datos[0].usuarioID}`
         document.querySelector('#nombre').value = `${datos[0].nombre}`
         document.querySelector('#apellido').value = `${datos[0].apellido}`
-        document.querySelector('#email').value = `${datos[0].correo}`
+        document.querySelector('#correo').value = `${datos[0].correo}`
+        document.querySelector('#contraseña').value = `${datos[0].contraseña}`
         document.querySelector('#telefono').value = `${datos[0].telefono}`
         document.querySelector('#direccion').value = `${datos[0].direccion}`
+        document.querySelector('#fechaNacimiento').value = `${datos[0].fecha_nacimiento}`
+        document.querySelector('#genero').value = `${datos[0].genero}`
+
+
     }).catch(function(err){
         console.log(err)
     })
 }
 
 function update(){
+    var usuarioId = document.getElementById('usuario').value
     var nombre = document.getElementById('nombre').value
     var apellido = document.getElementById('apellido').value
+    var correo = document.getElementById('correo').value
+    var contraseña = document.getElementById('contraseña').value
     var telefono = document.getElementById('telefono').value
-    var correo = document.getElementById('email').value
     var direccion = document.getElementById('direccion').value
+    var fecha_nacimiento = document.getElementById('fechaNacimiento').value
+    var genero = document.getElementById('genero').value
 
-    axios.put('http://localhost:3000/pokemon', {
+
+
+    axios.put('http://localhost:3000/user', {
+            user_usuario: usuarioId,
             user_nombre: nombre,
             user_apellido: apellido,
-            user_telefono: telefono,
             user_correo: correo,
-            user_direccion: direccion
+            user_contraseña: contraseña,
+            user_telefono: telefono,
+            user_direccion: direccion,
+            user_fecha_nacimiento: fecha_nacimiento,
+            user_genero: genero
+
     }, headers).then(function(res){
         console.log(res)
         alert("Modificacion exitosa")
-        window.location.href = "Inicio2.html"
+        window.location.href = "Perfil.html"
     }).catch(function(err){
         console.log(err)
     })
