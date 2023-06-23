@@ -99,6 +99,19 @@
   padding: 20px;
   background-color: #ffffff;
   }
+ 
+  .link{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+   
 
 
 }
@@ -120,8 +133,8 @@
 <body>
   <div class="profile-container">
     <div class="top-bar">
-      <img class="profile-picture" src="profile_picture.jpg" alt="Foto de perfil" onclick="GoToPerfil()">
-      <h1 class="username">@Username</h1>
+      <img class="profile-picture" src="assets/f3.jpg" alt="Foto de perfil" onclick="GoToPerfil()">
+      <h1 class="username">Rodrigo Catelana</h1>
       <div class="profile-buttons">
         <button class="button" onclick="GoToAmigos()">Amigos</button>
         <button class="button" onclick="GoToSeguidores()">Seguidores</button>
@@ -131,35 +144,88 @@
     <div class="main-area">
       <div class="additional-info">
       <div class="info-card">
-          <h2>Amigos</h2>
-          <div class="friend-list">
-            <!-- Lista de amigos del usuario -->
-            <div class="friend-item">
-              <img src="friend1.jpg" alt="Amigo 1">
-              <span class="friend-name">Nombre</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend2.jpg" alt="Amigo 2">
-              <span class="friend-name">Nombre 2</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend3.jpg" alt="Amigo 3">
-              <span class="friend-name">Nombre 3</span>
-            </div>
-           <div class="friend-item">
-              <img src="friend1.jpg" alt="Amigo 1">
-              <span class="friend-name">Nombre 1</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend2.jpg" alt="Amigo 2">
-              <span class="friend-name">Nombre 2</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend3.jpg" alt="Amigo 3">
-              <span class="friend-name">Nombre 3</span>
-            </div>
+        <div class="amigos">
+   
+          <title>Angel Rodrigo</title>
+      
+          <h1>Estos son tus amigos Angel Rodrigo:</h1>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>¿Quieres visitar su perfil?</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      
+                  <tr>
+                    <tr>
+                      <td>Juan Carlos López García              </td>
+                      <td><<button class="link" onclick="redirigirPerfil('perfiljuan.html')">Ver Perfil</button>
+                      </></td>
+                  </tr>
+                  <tr>
+                      <td>María Isabel Rodríguez Fernández
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo2.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td>Pedro Antonio Martínez González
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo3.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td>Laura Sofía Sánchez Torres
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo4.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td>Alejandro José Ramírez Herrera
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo5.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td> Ana Carolina Gómez Silva
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo6.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td>Luis Felipe Ramírez Vargas
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo7.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td>Gabriela Valentina Morales Medina
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo8.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td>Manuel Alejandro Castro Muñoz
+                      </td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo9.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                      <td>Sofía Valeria Ríos Peña</td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo10.html')">Ver Perfil</button></td>
+                  </tr>
+                  
+                      
+              </tbody>
+          </table>
+      
+          <script>
+              function redirigirPerfil(perfilUrl) {
+                  window.location.href = perfilUrl;
+              }
+          </script>
+      
+        </div>
+          
+          
           </div>
         </div>
   </div>
+  
 </body>
 </html>

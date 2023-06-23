@@ -100,6 +100,32 @@
   padding: 20px;
   background-color: #ffffff;
   }
+  .info-card{
+    text-align: center;
+  }
+  .friend-list {
+    text-align: center;  }
+    .delete{
+      background-color: #f14434;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .follow{
+      background-color: #34f144;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+
+    }
 
 
 	</style>
@@ -120,44 +146,136 @@
 	<body>
 	    <div class="profile-container">
 	    <div class="top-bar">
-	      <img class="profile-picture" src="profile_picture.jpg" alt="Foto de perfil" onclick="GoToPerfil()">
-	      <h1 class="username">@Username</h1>
+	      <img class="profile-picture" src="assets/f3.jpg" alt="Foto de perfil" onclick="GoToPerfil()">
+	      <h1 class="username">Rodrigo Catelana</h1>
+        
 	      <div class="profile-buttons">
 	        <button class="button" onclick="GoToAmigos()">Amigos</button>
 	        <button class="button" onclick="GoToSeguidores()">Seguidores</button>
 	        <button class="button" onclick="GoToModificar()">Modificar Datos</button>
 	      </div>
+      
 	    </div>
     <div class="main-area">
       <div class="additional-info">
       <div class="info-card">
           <h2>Seguidores</h2>
           <div class="friend-list">
-            <!-- Lista de amigos del usuario -->
-            <div class="friend-item">
-              <img src="friend1.jpg" alt="Seguidor">
-              <span class="friend-name">Seguidor 1</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend2.jpg" alt="Seguidor">
-              <span class="friend-name">Seguidor 2</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend3.jpg" alt="Seguidor">
-              <span class="friend-name">Seguidor 3</span>
-            </div>
-           <div class="friend-item">
-              <img src="friend1.jpg" alt="Seguidor">
-              <span class="friend-name">Seguidor 1</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend2.jpg" alt="Seguidor">
-              <span class="friend-name">Seguidor 2</span>
-            </div>
-            <div class="friend-item">
-              <img src="friend3.jpg" alt="Seguidor">
-              <span class="friend-name">Seguidor 3</span>
-            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="assets/8s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>María José González</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo1')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo1')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/7s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Juan Carlos Pérez</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo2')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo2')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/8s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Ana Sofía López</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo1')">Seguir</button>
+                    <button  class="delete" onclick="eliminarSeguidor('amigo1')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/7s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Luis Miguel García</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo2')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo2')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/8s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Carolina Valentina Ruiz</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo1')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo1')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/7s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Alejandro Andrés Rodríguez</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo2')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo2')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/8s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Gabriela Fernanda Herrera</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo1')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo1')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/7s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Roberto Eduardo Silva</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo2')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo2')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/8s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Valentina Isabella Torres</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo1')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo1')">Eliminar</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="assets/7s.png" alt="Seguidor" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+                  </td>
+                  <td>Manuel Alejandro Navarro</td>
+                  <td>
+                    <button class="follow" onclick="seguir('amigo2')">Seguir</button>
+                    <button class="delete" onclick="eliminarSeguidor('amigo2')">Eliminar</button>
+                  </td>
+                </tr>
+                
+                <!-- Agrega más filas según sea necesario -->
+              </tbody>
+            </table>
+            
+            
           </div>
         </div>
   </div>

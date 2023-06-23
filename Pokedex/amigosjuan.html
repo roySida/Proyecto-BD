@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de amigos</title>
+</head>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f0f2f5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+ background-color: #4cc1db;
+ border-color: #4CDB77;
+  color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color: #ffffff;
+}
+
+.username {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-buttons {
+  margin-left: auto;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #3b5998;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.main-area {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.additional-info {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.info-card {
+  background-color: #f0f2f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.photo-item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.photo-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .post-image {
+    max-width: 95%;
+    height: auto;
+    position: justify;
+  }
+  .post-rec{
+  padding: 20px;
+  background-color: #ffffff;
+  }
+ 
+  .link{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+   
+
+
+}
+</style>
+<script>
+    function GoToModificar() {
+      window.location.href = "Modificarperfil.html";
+    }
+      function GoToAmigos() {
+      window.location.href = "amigosjuan.html";
+    }
+        function GoToSeguidores() {
+      window.location.href = "seguidoresjuan.html";
+    }
+    function GoToPerfil(){
+      window.location.href = "perfiljuan.html";
+    }
+  </script>
+<body>
+  <div class="profile-container">
+    <div class="top-bar">
+      <img class="profile-picture" src="assets/10s.jpeg" alt="Foto de perfil" onclick="GoToPerfil()">
+      <h1 class="username">Juan Carlos López García </h1>
+      <div class="profile-buttons">
+        <button class="button" onclick="GoToAmigos()">Amigos</button>
+        <button class="button" onclick="GoToSeguidores()">Seguidores</button>
+        <button class="button" onclick="GoToModificar()">Modificar Datos</button>
+      </div>
+    </div>
+    <div class="main-area">
+      <div class="additional-info">
+      <div class="info-card">
+        <div class="amigos">
+   
+          <title>Angel Rodrigo</title>
+      
+          <h1>Estos son tus amigos Carlos López :</h1>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>¿Quieres visitar su perfil?</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      
+                  <tr>
+                    
+                    
+                  <tr>
+                      <td>Sofía Valeria Ríos Peña</td>
+                      <td><button class="link" onclick="redirigirPerfil('perfil_amigo10.html')">Ver Perfil</button></td>
+                  </tr>
+                  <tr>
+                    <td>Juan Carlos López</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfiljuan.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>María Fernanda Rodríguez</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfilmaria.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Pedro Antonio Gómez</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfilpedro.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Laura Isabel Martínez</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfillaura.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Luis Miguel Sánchez</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfilluis.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Ana Gabriela Ramírez</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfilana.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Alejandro José Paredes</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfilalejandro.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Carolina Andrea Castro</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfilcarolina.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Javier Andrés Vargas</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfiljavier.html')">Ver Perfil</button></td>
+                </tr>
+                <tr>
+                    <td>Valentina Guadalupe Morales</td>
+                    <td><button class="link" onclick="redirigirPerfil('perfilvalentina.html')">Ver Perfil</button></td>
+                </tr>
+                
+                  
+                      
+              </tbody>
+          </table>
+      
+          <script>
+              function redirigirPerfil(perfilUrl) {
+                  window.location.href = perfilUrl;
+              }
+          </script>
+      
+        </div>
+          
+          
+          </div>
+        </div>
+  </div>
+  
+</body>
+</html>
