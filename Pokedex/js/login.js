@@ -13,7 +13,7 @@ function init(){
     
         document.querySelector('.btn-primary').addEventListener('click', login)
     } else {
-        window.location.href = "Inicio2.html"
+        window.location.href = "Perfil.html"
     }
 }
 
@@ -31,7 +31,7 @@ function login(){
     }).then(function(res){
         if (res.data.code === 200){
             localStorage.setItem("token", res.data.message)
-            window.location.href = "Perfil.html"
+            window.location.href = "Inicio2.html"
         } else {
             alert(res.data.message)
         }
